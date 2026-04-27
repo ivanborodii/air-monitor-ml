@@ -1,0 +1,25 @@
+# air-monitor/requirements.txt
+# Pin existing sensor libraries to the versions already installed in the venv.
+# Install the three new dependencies with:
+#   pip install duckdb psutil PyYAML
+
+# --- Sensor libraries (already installed) ---
+bme680==2.0.0
+smbus2==0.6.1
+sensirion-i2c-driver==1.0.2
+sensirion-driver-adapters==2.3.1
+sensirion-driver-support-types==1.2.1
+sensirion-i2c-sps30==1.0.0
+sensirion-shdlc-driver==0.1.5
+
+# --- Pipeline dependencies ---
+duckdb>=1.1.0
+psutil>=6.0.0
+PyYAML>=6.0.1
+pytz>=2024.1
+
+# --- ML module dependencies ---
+scikit-learn>=1.4.0
+pandas>=2.0.0
+numpy>=1.26.0
+joblib>=1.3.0

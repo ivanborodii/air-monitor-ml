@@ -1,0 +1,7 @@
+{
+  "for_model": "local_outlier_factor",
+  "trained_at": "20260427T190124Z",
+  "model_size_kb": 1.83,
+  "model_name": "local_outlier_factor_scaler",
+  "saved_at": "20260427T190125Z"
+}

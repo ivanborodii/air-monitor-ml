@@ -1,0 +1,58 @@
+[
+  {
+    "model": "isolation_forest_synth",
+    "n_samples": 3319,
+    "n_anomalies_detected": 132,
+    "latency_ms": 15.818168998521287,
+    "latency_per_sample_ms": 0.004765944259873844,
+    "cpu_pct": 37.65,
+    "ram_percent": 45.2,
+    "process_memory_mb": 244.578125,
+    "n_true_anomalies": 66,
+    "precision": 0.030303030303030304,
+    "recall": 0.06060606060606061,
+    "f1": 0.04040404040404041
+  },
+  {
+    "model": "local_outlier_factor_synth",
+    "n_samples": 3319,
+    "n_anomalies_detected": 186,
+    "latency_ms": 86.16554600303061,
+    "latency_per_sample_ms": 0.025961297379641642,
+    "cpu_pct": 48.050000000000004,
+    "ram_percent": 45.2,
+    "process_memory_mb": 245.8359375,
+    "n_true_anomalies": 66,
+    "precision": 0.3172043010752688,
+    "recall": 0.8939393939393939,
+    "f1": 0.46825396825396826
+  },
+  {
+    "model": "local_outlier_factor_pca_synth",
+    "n_samples": 3319,
+    "n_anomalies_detected": 163,
+    "latency_ms": 114.85903600259917,
+    "latency_per_sample_ms": 0.034606518831756305,
+    "cpu_pct": 80.8,
+    "ram_percent": 45.2,
+    "process_memory_mb": 247.09375,
+    "n_true_anomalies": 66,
+    "precision": 0.1656441717791411,
+    "recall": 0.4090909090909091,
+    "f1": 0.23580786026200873
+  },
+  {
+    "model": "one_class_svm_synth",
+    "n_samples": 3319,
+    "n_anomalies_detected": 180,
+    "latency_ms": 56.67299500055378,
+    "latency_per_sample_ms": 0.017075322386427776,
+    "cpu_pct": 51.15,
+    "ram_percent": 45.2,
+    "process_memory_mb": 247.09375,
+    "n_true_anomalies": 66,
+    "precision": 0.07777777777777778,
+    "recall": 0.21212121212121213,
+    "f1": 0.11382113821138211
+  }
+]

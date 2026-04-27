@@ -1,0 +1,17 @@
+[Unit]
+Description=Air Quality Monitoring Pipeline
+After=multi-user.target
+
+[Service]
+Type=simple
+User=ivan
+WorkingDirectory=/home/ivan/python_scripts/air_ml/air-monitor
+ExecStart=/home/ivan/python_scripts/air_ml/.venv/bin/python scripts/run_pipeline.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=air-monitor
+
+[Install]
+WantedBy=multi-user.target

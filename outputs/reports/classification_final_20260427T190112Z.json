@@ -1,0 +1,130 @@
+[
+  {
+    "model": "threshold_baseline",
+    "label": "health_risk",
+    "n_samples": 664,
+    "n_positive": 326,
+    "n_negative": 338,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "confusion_matrix": [
+      [
+        338,
+        0
+      ],
+      [
+        0,
+        326
+      ]
+    ],
+    "latency_ms": 0.0,
+    "latency_per_sample_ms": 0.0,
+    "cpu_pct": 0.0,
+    "ram_percent": 0.0,
+    "process_memory_mb": 0.0,
+    "train_time_ms": 0.0,
+    "train_cpu_pct": 0.0,
+    "train_ram_percent": 0.0,
+    "train_process_memory_mb": 0.0,
+    "model_size_kb": 0.0,
+    "split": "temporal_80_20"
+  },
+  {
+    "model": "logistic_regression",
+    "label": "health_risk",
+    "n_samples": 664,
+    "n_positive": 326,
+    "n_negative": 338,
+    "accuracy": 0.7921686746987951,
+    "precision": 0.7107623318385651,
+    "recall": 0.9723926380368099,
+    "f1": 0.8212435233160622,
+    "confusion_matrix": [
+      [
+        209,
+        129
+      ],
+      [
+        9,
+        317
+      ]
+    ],
+    "latency_ms": 0.3162970024277456,
+    "latency_per_sample_ms": 0.0004763509072707012,
+    "cpu_pct": 0.0,
+    "ram_percent": 45.5,
+    "process_memory_mb": 239.421875,
+    "train_time_ms": 24.28156200039666,
+    "train_cpu_pct": 100.0,
+    "train_ram_percent": 45.5,
+    "train_process_memory_mb": 238.8125,
+    "split": "temporal_80_20",
+    "model_size_kb": 1.07
+  },
+  {
+    "model": "decision_tree",
+    "label": "health_risk",
+    "n_samples": 664,
+    "n_positive": 326,
+    "n_negative": 338,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "confusion_matrix": [
+      [
+        338,
+        0
+      ],
+      [
+        0,
+        326
+      ]
+    ],
+    "latency_ms": 0.3125570001429878,
+    "latency_per_sample_ms": 0.000470718373709319,
+    "cpu_pct": 50.0,
+    "ram_percent": 45.5,
+    "process_memory_mb": 239.734375,
+    "train_time_ms": 68.9649619962438,
+    "train_cpu_pct": 23.6,
+    "train_ram_percent": 45.5,
+    "train_process_memory_mb": 239.734375,
+    "split": "temporal_80_20",
+    "model_size_kb": 1.38
+  },
+  {
+    "model": "random_forest",
+    "label": "health_risk",
+    "n_samples": 664,
+    "n_positive": 326,
+    "n_negative": 338,
+    "accuracy": 0.9804216867469879,
+    "precision": 1.0,
+    "recall": 0.9601226993865031,
+    "f1": 0.9796557120500783,
+    "confusion_matrix": [
+      [
+        338,
+        0
+      ],
+      [
+        13,
+        313
+      ]
+    ],
+    "latency_ms": 4.199039001832716,
+    "latency_per_sample_ms": 0.006323853918422766,
+    "cpu_pct": 25.0,
+    "ram_percent": 45.5,
+    "process_memory_mb": 239.734375,
+    "train_time_ms": 322.12812900252175,
+    "train_cpu_pct": 20.85,
+    "train_ram_percent": 45.5,
+    "train_process_memory_mb": 239.734375,
+    "split": "temporal_80_20",
+    "model_size_kb": 55.98
+  }
+]

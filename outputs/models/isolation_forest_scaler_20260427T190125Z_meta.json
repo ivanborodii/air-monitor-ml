@@ -1,0 +1,7 @@
+{
+  "for_model": "isolation_forest",
+  "trained_at": "20260427T190124Z",
+  "model_size_kb": 1.83,
+  "model_name": "isolation_forest_scaler",
+  "saved_at": "20260427T190125Z"
+}

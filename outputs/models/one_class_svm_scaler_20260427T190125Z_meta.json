@@ -1,0 +1,7 @@
+{
+  "for_model": "one_class_svm",
+  "trained_at": "20260427T190124Z",
+  "model_size_kb": 1.83,
+  "model_name": "one_class_svm_scaler",
+  "saved_at": "20260427T190125Z"
+}

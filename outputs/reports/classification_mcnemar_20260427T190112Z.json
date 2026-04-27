@@ -1,0 +1,56 @@
+[
+  {
+    "model1": "threshold_baseline",
+    "model2": "logistic_regression",
+    "b": 138,
+    "c": 0,
+    "statistic": 136.0072463768116,
+    "p_value": 0.0,
+    "significant": true
+  },
+  {
+    "model1": "threshold_baseline",
+    "model2": "decision_tree",
+    "b": 0,
+    "c": 0,
+    "statistic": 0.0,
+    "p_value": 1.0,
+    "significant": false
+  },
+  {
+    "model1": "threshold_baseline",
+    "model2": "random_forest",
+    "b": 13,
+    "c": 0,
+    "statistic": 11.076923076923077,
+    "p_value": 0.0008740872112984466,
+    "significant": true
+  },
+  {
+    "model1": "logistic_regression",
+    "model2": "decision_tree",
+    "b": 0,
+    "c": 138,
+    "statistic": 136.0072463768116,
+    "p_value": 0.0,
+    "significant": true
+  },
+  {
+    "model1": "logistic_regression",
+    "model2": "random_forest",
+    "b": 13,
+    "c": 138,
+    "statistic": 101.82781456953643,
+    "p_value": 0.0,
+    "significant": true
+  },
+  {
+    "model1": "decision_tree",
+    "model2": "random_forest",
+    "b": 13,
+    "c": 0,
+    "statistic": 11.076923076923077,
+    "p_value": 0.0008740872112984466,
+    "significant": true
+  }
+]

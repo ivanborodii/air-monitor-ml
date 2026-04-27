@@ -1,0 +1,19 @@
+# config/thresholds.yaml
+# Alert thresholds for future rule-based labelling.
+# Not used by the current pipeline version.
+# These values will be read by pipeline/labeler.py (not yet implemented).
+
+co2_ppm_warn: 1000        # CO2 warning level [ppm]
+co2_ppm_critical: 2000    # CO2 critical level [ppm]
+
+pm2_5_warn: 12.0          # PM2.5 WHO daily guideline [µg/m³]
+pm2_5_critical: 35.4      # PM2.5 US EPA 24-hour standard [µg/m³]
+
+pm10_warn: 45.0           # PM10 WHO daily guideline [µg/m³]
+pm10_critical: 150.0      # PM10 US EPA 24-hour standard [µg/m³]
+
+temperature_min_c: 10.0   # lower bound for normal indoor temperature [°C]
+temperature_max_c: 40.0   # upper bound for normal indoor temperature [°C]
+
+humidity_min_pct: 20.0    # lower bound for comfortable humidity [%]
+humidity_max_pct: 80.0    # upper bound for comfortable humidity [%]

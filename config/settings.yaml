@@ -1,0 +1,40 @@
+# config/settings.yaml
+# Runtime configuration for the air-monitor pipeline.
+# All paths are relative to the air-monitor/ project root.
+
+# DuckDB database file
+db_path: "data/air_monitor.duckdb"
+
+# JSON micro-batch buffer file.
+# Observations are written here each cycle and flushed to DuckDB in bulk
+# when the batch reaches MICROBATCH_SIZE. Truncated to [] after each flush.
+json_buffer_path: "data/batch_buffer.json"
+
+# Log file (rotating, 10 MB max, 5 backups kept)
+log_path: "data/logs/pipeline.log"
+
+# Seconds between collection cycles.
+# Each cycle reads all sensors, builds one observation, and writes to DuckDB.
+# The pipeline sleeps max(0, interval - cycle_duration) between cycles.
+collection_interval_seconds: 30
+
+# Enable or disable individual sensors.
+# A disabled sensor has its fields stored as NULL and its status as "disabled".
+enabled_sensors:
+  scd41: true
+  bme688: true
+  sps30: true
+
+# Set to false to skip writing the runtime_metrics table (saves disk I/O).
+enable_runtime_metrics: true
+
+# Power measurement settings.
+# Set enable_power_metrics to true and provide power_meter_type when a
+# physical power meter is connected (e.g. INA219 on I2C).
+# Supported types (future): "ina219"
+enable_power_metrics: false
+power_meter_type: null
+
+# Override MICROBATCH_SIZE from config/constants.py at runtime.
+# Set to an integer to override, or leave null to use the constant (10).
+microbatch_size_override: null
