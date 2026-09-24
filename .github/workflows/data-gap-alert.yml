@@ -7,7 +7,12 @@ on:
     # emailing, so it stays correct across the DST switch even though this
     # cron range doesn't auto-adjust.
     - cron: "15 6-18 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      force_test_alert:
+        description: "Skip the freshness check and send a test email (to verify SMTP works)"
+        type: boolean
+        default: false
 
 jobs:
   check:
@@ -29,4 +34,5 @@ jobs:
           MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           GMAIL_USER: ivanborodii@gmail.com
+          FORCE_TEST_ALERT: ${{ inputs.force_test_alert }}
         run: python scripts/check_data_gap.py

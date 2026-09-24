@@ -48,6 +48,17 @@ def main() -> int:
     now_utc = datetime.now(timezone.utc)
     now_kyiv = now_utc.astimezone(ALERT_TZ)
 
+    if os.environ.get("FORCE_TEST_ALERT", "").lower() in ("1", "true"):
+        send_email(
+            "[air-monitor] Test alert (forced manually)",
+            "This is a manually forced test email from check_data_gap.py "
+            "(FORCE_TEST_ALERT=true), not a real data-gap detection. If "
+            "you got this, SMTP delivery from GitHub Actions works.\n\n"
+            f"Sent at {now_utc.isoformat()} UTC / {now_kyiv:%Y-%m-%d %H:%M} Kyiv.",
+        )
+        print("FORCE_TEST_ALERT set; sent test email and exiting.")
+        return 0
+
     if not (ALERT_WINDOW[0] <= now_kyiv.hour < ALERT_WINDOW[1]):
         print(f"Outside alert window ({now_kyiv:%H:%M} Kyiv) - skipping check.")
         return 0
