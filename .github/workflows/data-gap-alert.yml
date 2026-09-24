@@ -1,0 +1,32 @@
+name: air-monitor data gap alert
+
+on:
+  schedule:
+    # Hourly, 06:15-18:15 UTC (~9:15am-9:15pm Kyiv while on EEST/UTC+3).
+    # The script itself re-checks the real Europe/Kyiv local hour before
+    # emailing, so it stays correct across the DST switch even though this
+    # cron range doesn't auto-adjust.
+    - cron: "15 6-18 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install duckdb
+        run: pip install --quiet duckdb
+
+      - name: Check raw_observations freshness
+        env:
+          MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_USER: ivanborodii@gmail.com
+        run: python scripts/check_data_gap.py
