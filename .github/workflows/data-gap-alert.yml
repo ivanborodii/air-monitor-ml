@@ -21,8 +21,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install duckdb
-        run: pip install --quiet duckdb
+      - name: Install dependencies
+        run: pip install --quiet duckdb pytz
 
       - name: Check raw_observations freshness
         env:
