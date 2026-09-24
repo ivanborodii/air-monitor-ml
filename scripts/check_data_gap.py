@@ -59,10 +59,12 @@ def main() -> int:
         row = con.execute(f"SELECT max(measured_at) FROM {MD_TABLE}").fetchone()
         last_ts = row[0] if row else None
     except Exception:
+        tb = traceback.format_exc()
+        print(tb, file=sys.stderr)
         send_email(
             "[air-monitor] Data-gap check itself failed",
             "The check script raised an exception before it could determine "
-            "freshness. Traceback:\n\n" + traceback.format_exc(),
+            "freshness. Traceback:\n\n" + tb,
         )
         print("Check failed with an exception; sent failure alert.", file=sys.stderr)
         return 1
